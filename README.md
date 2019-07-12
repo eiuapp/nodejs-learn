@@ -10,8 +10,8 @@ nodejs learn
 
 请点击下面的链接阅读:
 
-- [在线阅读](https://eiuapp.github.io/)：hugo格式，界面清爽。
-- [@github](https://github.com/eiuapp/eiuapp-learn/)：源码托管于github，如有谬误或需讨论，请提issue，欢迎提交PR
+- [在线阅读](https://eiuapp.github.io/nodejs-learn/)：hugo格式，界面清爽。
+- [@github](https://github.com/eiuapp/nodejs-learn/)：源码托管于github，如有谬误或需讨论，请提issue，欢迎提交PR
 
 
 ### 版权申明
