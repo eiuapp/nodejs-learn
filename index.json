@@ -1,0 +1,71 @@
+[
+{
+	"uri": "https://eiuapp.github.io/nodejs-learn/",
+	"title": "前言",
+	"tags": [],
+	"description": "blog",
+	"content": " 内容介绍 nodejs learn\n这是个人博客, 主要包括一些学习笔记\n访问方式 请点击下面的链接阅读:\n 在线阅读：hugo格式，界面清爽。 @github：源码托管于github，如有谬误或需讨论，请提issue，欢迎提交PR  版权申明 本笔记内容可以任意转载，但请注明来源并提供链接，请勿用于商业出版。\n"
+},
+{
+	"uri": "https://eiuapp.github.io/nodejs-learn/install.html",
+	"title": "安装nodejs",
+	"tags": [],
+	"description": "blog",
+	"content": "关于安装nodejs\n"
+},
+{
+	"uri": "https://eiuapp.github.io/nodejs-learn/debug.html",
+	"title": "nodejs debug",
+	"tags": [],
+	"description": "blog",
+	"content": ""
+},
+{
+	"uri": "https://eiuapp.github.io/nodejs-learn/debug/install-ndb-on-wsl.html",
+	"title": "在wsl中安装使用ndb(未完成)",
+	"tags": ["wsl", "nodejs", "debug"],
+	"description": "",
+	"content": " 在wsl中安装使用ndb(未完成)\nenv  wsl: ubuntu16.04 node: 11.14.0  安装 step currency-api 通过 awesome-nodejs 找到 ndb\n看了一下，是google开发维护的，决定尝试\n从 https://geshan.com.np/blog/2019/01/getting-started-with-debugging-nodejs-applications-with-ndb/\n到\nhttps://github.com/geshan/currency-api\n这是一个很好的测试nodejs工程。\nndb index.js ndb index.js  正常情况下，应该出来ndb的窗口。但是，我这里，无任何反应 Nothing but a flashing cursor when I get ndb installed 。\nhttps://github.com/GoogleChromeLabs/ndb/issues/154\n到\nhttps://github.com/GoogleChromeLabs/ndb/issues/33\n到\nhttps://github.com/GoogleChrome/puppeteer/issues/1837#issuecomment-508761569\nsudo apt install chromium-browser npm i puppeteer-core  找到\nDESKTOP-APB1HCJ% which chromium-browser /usr/bin/chromium-browser  但是，有一句话，是：\nOnce I had that, I added the path to it in the puppeteer.launch function as the executablePath argument. So my code now looks like this:\n这里提到的 puppeteer.launch function 在哪里呀？\n思考 https://github.com/GoogleChrome/puppeteer/issues/1837\nwsl 升级到 wsl2 看来只能 wsl 升级到 wsl2\n这是一个大的步子，所以，这个先放一边吧。\n"
+},
+{
+	"uri": "https://eiuapp.github.io/nodejs-learn/categories.html",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://eiuapp.github.io/nodejs-learn/tags.html",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://eiuapp.github.io/nodejs-learn/tags/debug.html",
+	"title": "debug",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://eiuapp.github.io/nodejs-learn/tags/nodejs.html",
+	"title": "nodejs",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://eiuapp.github.io/nodejs-learn/categories/nodejs.html",
+	"title": "nodejs",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://eiuapp.github.io/nodejs-learn/tags/wsl.html",
+	"title": "wsl",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]
