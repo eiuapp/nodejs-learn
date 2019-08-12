@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.56.2" />
-    <meta name="description" content="Documentation for Learn">
+    <meta name="description" content="nodejs安装包时出现ERR_TLS_CERT_ALTNAME_INVALID">
 <meta name="author" content="曾云龙">
 
     <link rel="icon" href="https://eiuapp.github.io/nodejs-learn/images/favicon.png" type="image/png">
 
-    <title>Categories :: Documentation for Hugo Learn Theme</title>
+    <title>ERR_TLS_CERT_ALTNAME_INVALID :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="https://eiuapp.github.io/nodejs-learn/css/nucleus.css?1565595342" rel="stylesheet">
@@ -33,7 +33,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/categories.html">
+  <body class="" data-url="/faq/ERR_TLS_CERT_ALTNAME_INVALID.html">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -116,7 +116,7 @@
   
     
     <li data-nav-id="/faq.html" title="常见问题" class="dd-item 
-        
+        parent
         
         
         ">
@@ -142,7 +142,7 @@
  
   
     
-      <li data-nav-id="/faq/ERR_TLS_CERT_ALTNAME_INVALID.html" title="ERR_TLS_CERT_ALTNAME_INVALID" class="dd-item ">
+      <li data-nav-id="/faq/ERR_TLS_CERT_ALTNAME_INVALID.html" title="ERR_TLS_CERT_ALTNAME_INVALID" class="dd-item active">
         <a href="https://eiuapp.github.io/nodejs-learn/faq/ERR_TLS_CERT_ALTNAME_INVALID.html">
         ERR_TLS_CERT_ALTNAME_INVALID
         <i class="fas fa-check read-icon"></i>
@@ -262,6 +262,17 @@
               <div>
                 <div id="top-bar">
                 
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/eiuapp/nodejs-learn/edit/master/content/faq/ERR_TLS_CERT_ALTNAME_INVALID.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
                 
                 <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
                     <span id="sidebar-toggle-span">
@@ -278,7 +289,19 @@
                     
           
           
-            Categories
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='https://eiuapp.github.io/nodejs-learn/'>前言</a> > <a href='https://eiuapp.github.io/nodejs-learn/faq.html'>常见问题</a> > ERR_TLS_CERT_ALTNAME_INVALID
+          
+         
+          
+         
           
         
                  
@@ -303,7 +326,7 @@
           
             <h1>
               
-              Categories
+              ERR_TLS_CERT_ALTNAME_INVALID
             </h1>
           
 
@@ -311,19 +334,32 @@
 
 
 
+<p>如果出现了<code>ERR_TLS_CERT_ALTNAME_INVALID</code>错误，具体如下：</p>
 
+<pre><code>ubuntu@utuntu:~/chat/chat-admin-server$ cnpm init egg --type=simple
+npm ERR! code ERR_TLS_CERT_ALTNAME_INVALID
+npm ERR! errno ERR_TLS_CERT_ALTNAME_INVALID
+npm ERR! request to https://registry.npmjs.org/create-egg failed, reason: Hostname/IP does not match certificate's altnames: Host: registry.npmjs.org. is not in the cert's altnames: DNS:a.sni.fastly.net, DNS:a.sni.global-ssl.fastly.net
 
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/ubuntu/.npm/_logs/2019-08-12T06_32_33_746Z-debug.log
+Install for create-egg@latest failed with code 1
+ubuntu@utuntu:~/chat/chat-admin-server$ 
+</code></pre>
 
-<ul>
-	
-		<li><a href="https://eiuapp.github.io/nodejs-learn/categories/nodejs.html">nodejs</a></li>
-	
-</ul>
+<p>解决方式：</p>
+
+<ol>
+<li><code>npm config set strict-ssl false</code>。参考<a href="https://blog.csdn.net/Lianxingjie_1024/article/details/80275618">这里</a></li>
+<li>设置registry. 运行<code>npm config set registry &quot;http://registry.npmjs.org&quot;</code>。参考<a href="https://stackoverflow.com/questions/52129097/npm-err-code-err-tls-cert-altname-invalid">这里</a></li>
+<li>修改 <code>/etc/hosts</code> 中的 <code>registry.npmjs.org</code> 的配置。比如，我是注释掉 <code>#151.101.16.162 registry.npmjs.org</code>。</li>
+</ol>
 
 
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -388,6 +424,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -406,6 +443,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -443,8 +483,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="https://eiuapp.github.io/nodejs-learn/faq.html" title="常见问题"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="https://eiuapp.github.io/nodejs-learn/install.html" title="安装nodejs" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="https://eiuapp.github.io/nodejs-learn/debug.html" title="nodejs debug" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -474,3 +516,4 @@
 
   </body>
 </html>
+

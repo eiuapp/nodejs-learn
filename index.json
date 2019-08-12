@@ -7,6 +7,13 @@
 	"content": " 内容介绍 nodejs learn\n这是个人博客, 主要包括一些学习笔记\n访问方式 请点击下面的链接阅读:\n 在线阅读：hugo格式，界面清爽。 @github：源码托管于github，如有谬误或需讨论，请提issue，欢迎提交PR  版权申明 本笔记内容可以任意转载，但请注明来源并提供链接，请勿用于商业出版。\n"
 },
 {
+	"uri": "https://eiuapp.github.io/nodejs-learn/faq/ERR_TLS_CERT_ALTNAME_INVALID.html",
+	"title": "ERR_TLS_CERT_ALTNAME_INVALID",
+	"tags": [],
+	"description": "nodejs安装包时出现ERR_TLS_CERT_ALTNAME_INVALID",
+	"content": "如果出现了ERR_TLS_CERT_ALTNAME_INVALID错误，具体如下：\nubuntu@utuntu:~/chat/chat-admin-server$ cnpm init egg --type=simple npm ERR! code ERR_TLS_CERT_ALTNAME_INVALID npm ERR! errno ERR_TLS_CERT_ALTNAME_INVALID npm ERR! request to https://registry.npmjs.org/create-egg failed, reason: Hostname/IP does not match certificate's altnames: Host: registry.npmjs.org. is not in the cert's altnames: DNS:a.sni.fastly.net, DNS:a.sni.global-ssl.fastly.net npm ERR! A complete log of this run can be found in: npm ERR! /home/ubuntu/.npm/_logs/2019-08-12T06_32_33_746Z-debug.log Install for create-egg@latest failed with code 1 ubuntu@utuntu:~/chat/chat-admin-server$  解决方式：\n npm config set strict-ssl false。参考这里 设置registry. 运行npm config set registry \u0026quot;http://registry.npmjs.org\u0026quot;。参考这里 修改 /etc/hosts 中的 registry.npmjs.org 的配置。比如，我是注释掉 #151.101.16.162 registry.npmjs.org。  "
+},
+{
 	"uri": "https://eiuapp.github.io/nodejs-learn/install.html",
 	"title": "安装nodejs",
 	"tags": [],
@@ -14,18 +21,18 @@
 	"content": "关于安装nodejs\n"
 },
 {
+	"uri": "https://eiuapp.github.io/nodejs-learn/faq.html",
+	"title": "常见问题",
+	"tags": [],
+	"description": "nodejs常见问题",
+	"content": "关于nodejs常见问题\n ERR_TLS_CERT_ALTNAME_INVALID  "
+},
+{
 	"uri": "https://eiuapp.github.io/nodejs-learn/debug.html",
 	"title": "nodejs debug",
 	"tags": [],
-	"description": "blog",
-	"content": ""
-},
-{
-	"uri": "https://eiuapp.github.io/nodejs-learn/debug/install-ndb-on-wsl.html",
-	"title": "在wsl中安装使用ndb(未完成)",
-	"tags": ["wsl", "nodejs", "debug"],
-	"description": "",
-	"content": " 在wsl中安装使用ndb(未完成)\nenv  wsl: ubuntu16.04 node: 11.14.0  安装 step currency-api 通过 awesome-nodejs 找到 ndb\n看了一下，是google开发维护的，决定尝试\n从 https://geshan.com.np/blog/2019/01/getting-started-with-debugging-nodejs-applications-with-ndb/\n到\nhttps://github.com/geshan/currency-api\n这是一个很好的测试nodejs工程。\nndb index.js ndb index.js  正常情况下，应该出来ndb的窗口。但是，我这里，无任何反应 Nothing but a flashing cursor when I get ndb installed 。\nhttps://github.com/GoogleChromeLabs/ndb/issues/154\n到\nhttps://github.com/GoogleChromeLabs/ndb/issues/33\n到\nhttps://github.com/GoogleChrome/puppeteer/issues/1837#issuecomment-508761569\nsudo apt install chromium-browser npm i puppeteer-core  找到\nDESKTOP-APB1HCJ% which chromium-browser /usr/bin/chromium-browser  但是，有一句话，是：\nOnce I had that, I added the path to it in the puppeteer.launch function as the executablePath argument. So my code now looks like this:\n这里提到的 puppeteer.launch function 在哪里呀？\n思考 https://github.com/GoogleChrome/puppeteer/issues/1837\nwsl 升级到 wsl2 看来只能 wsl 升级到 wsl2\n这是一个大的步子，所以，这个先放一边吧。\n"
+	"description": "nodejs debug",
+	"content": " 在wsl中安装使用ndb(未完成)  "
 },
 {
 	"uri": "https://eiuapp.github.io/nodejs-learn/categories.html",
@@ -68,4 +75,11 @@
 	"tags": [],
 	"description": "",
 	"content": ""
+},
+{
+	"uri": "https://eiuapp.github.io/nodejs-learn/debug/install-ndb-on-wsl.html",
+	"title": "在wsl中安装使用ndb(未完成)",
+	"tags": ["wsl", "nodejs", "debug"],
+	"description": "",
+	"content": " 在wsl中安装使用ndb(未完成)\nenv  wsl: ubuntu16.04 node: 11.14.0  安装 step currency-api 通过 awesome-nodejs 找到 ndb\n看了一下，是google开发维护的，决定尝试\n从 https://geshan.com.np/blog/2019/01/getting-started-with-debugging-nodejs-applications-with-ndb/\n到\nhttps://github.com/geshan/currency-api\n这是一个很好的测试nodejs工程。\nndb index.js ndb index.js  正常情况下，应该出来ndb的窗口。但是，我这里，无任何反应 Nothing but a flashing cursor when I get ndb installed 。\nhttps://github.com/GoogleChromeLabs/ndb/issues/154\n到\nhttps://github.com/GoogleChromeLabs/ndb/issues/33\n到\nhttps://github.com/GoogleChrome/puppeteer/issues/1837#issuecomment-508761569\nsudo apt install chromium-browser npm i puppeteer-core  找到\nDESKTOP-APB1HCJ% which chromium-browser /usr/bin/chromium-browser  但是，有一句话，是：\nOnce I had that, I added the path to it in the puppeteer.launch function as the executablePath argument. So my code now looks like this:\n这里提到的 puppeteer.launch function 在哪里呀？\n思考 https://github.com/GoogleChrome/puppeteer/issues/1837\nwsl 升级到 wsl2 看来只能 wsl 升级到 wsl2\n这是一个大的步子，所以，这个先放一边吧。\n"
 }]

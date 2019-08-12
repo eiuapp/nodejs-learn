@@ -8,7 +8,17 @@
   </url>
   
   <url>
+    <loc>https://eiuapp.github.io/nodejs-learn/faq/ERR_TLS_CERT_ALTNAME_INVALID.html</loc>
+    <lastmod>2019-01-08T21:07:13+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://eiuapp.github.io/nodejs-learn/install.html</loc>
+    <lastmod>2019-01-08T21:07:13+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eiuapp.github.io/nodejs-learn/faq.html</loc>
     <lastmod>2019-01-08T21:07:13+01:00</lastmod>
   </url>
   
@@ -18,17 +28,14 @@
   </url>
   
   <url>
-    <loc>https://eiuapp.github.io/nodejs-learn/debug/install-ndb-on-wsl.html</loc>
-    <lastmod>2018-03-02T12:15:19+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://eiuapp.github.io/nodejs-learn/categories.html</loc>
+    <lastmod>2018-03-02T12:15:19+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://eiuapp.github.io/nodejs-learn/tags.html</loc>
+    <lastmod>2018-03-02T12:15:19+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -54,6 +61,11 @@
     <loc>https://eiuapp.github.io/nodejs-learn/tags/wsl.html</loc>
     <lastmod>2018-03-02T12:15:19+08:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://eiuapp.github.io/nodejs-learn/debug/install-ndb-on-wsl.html</loc>
+    <lastmod>2018-03-02T12:15:19+08:00</lastmod>
   </url>
   
 </urlset>
